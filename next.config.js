@@ -7,7 +7,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 // The NextJS config defined separately
 // Gets passed to next-offline
 const nextConfig = {
-  trailingSlash: true,
   images: {
     remotePatterns: [
       {
