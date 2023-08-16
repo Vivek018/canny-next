@@ -61,3 +61,91 @@ export const serviceContent = {
     imageBg: CMSBg,
   },
 };
+
+export const serviceConfig = Object.freeze({
+  ecommerce: {
+    name: "Elevate Online Retail with Our Ecommerce Solutions | Canny Next",
+    description:
+      "Transform your business into a digital shopping destination with Canny Next's ecommerce solutions. Harness our expertise to create seamless user experiences, streamlined checkout processes, and captivating product showcases. Maximize conversions and customer engagement with our innovative approach to ecommerce.",
+    keywords: [
+      "ecommerce solutions",
+      "online retail",
+      "digital storefront",
+      "online shopping",
+      "ecommerce platform",
+      "user experience",
+      "conversion optimization",
+      "streamlined checkout",
+      "product showcase",
+      "customer engagement",
+    ],
+  },
+  saas: {
+    name: "Scalable Software as a Service (SaaS) Solutions | Canny Next",
+    description:
+      "Unlock the potential of cloud-based technology with Canny Next's SaaS solutions. Seamlessly access and manage software applications from anywhere while enjoying scalability and reduced IT costs. Experience innovation without the hassle of maintenance and updates.",
+    keywords: [
+      "Software as a Service",
+      "SaaS solutions",
+      "cloud technology",
+      "scalable software",
+      "cloud-based applications",
+      "remote access",
+      "IT cost reduction",
+      "scalability",
+      "maintenance-free",
+      "innovative technology",
+    ],
+  },
+  "epic-website": {
+    name: "Crafting Epic Websites that Captivate and Convert | Canny Next",
+    description:
+      "At Canny Next, we weave innovation and design to craft websites that leave a lasting impact. Our epic website design goes beyond aesthetics, ensuring each pixel is purposeful. Engage users with captivating visuals and seamless functionality that aligns with your brand's vision.",
+    keywords: [
+      "epic website design",
+      "captivating visuals",
+      "user engagement",
+      "responsive design",
+      "interactive interfaces",
+      "creative web design",
+      "seamless functionality",
+      "aesthetic appeal",
+      "brand alignment",
+      "user-centric experience",
+    ],
+  },
+  consulting: {
+    name: "Strategic Tech Consulting for Business Growth | Canny Next",
+    description:
+      "Navigate the ever-evolving tech landscape with Canny Next's expert consulting. Our strategic guidance empowers your business to make informed decisions, implement scalable solutions, and stay ahead of industry trends. Transform challenges into opportunities with our tech insights.",
+    keywords: [
+      "tech consulting",
+      "strategic guidance",
+      "technology solutions",
+      "business growth",
+      "industry insights",
+      "IT strategy",
+      "innovation implementation",
+      "industry trends",
+      "decision-making",
+      "digital transformation",
+    ],
+  },
+  cms: {
+    name: "Efficient Content Management with Our CMS Solutions | Canny Next",
+    description:
+      "Take control of your online content effortlessly using Canny Next's CMS solutions. Our user-friendly systems enable seamless content updates, ensuring your website remains current and engaging. Streamline workflows, collaborate effectively, and provide visitors with dynamic experiences.",
+    keywords: [
+      "CMS solutions",
+      "content management",
+      "website updates",
+      "user-friendly interface",
+      "content control",
+      "workflow optimization",
+      "collaboration tools",
+      "dynamic content",
+      "content publishing",
+      "website management",
+    ],
+  },
+});

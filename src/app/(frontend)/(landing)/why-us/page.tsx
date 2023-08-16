@@ -16,7 +16,7 @@ export default function WhyUsPage({}: Props) {
   const [index, setIndex] = useState(1);
 
   return (
-    <>
+    <main>
       <div className='fixed top-1/2 aspect-square left-1/2 w-12 sm:w-16  md:w-40 rounded-full bg-background text-primary grid place-items-center transform -translate-x-1/2 -translate-y-1/2 shadow-lg md:shadow-2xl z-50'>
         <span className='hidden md:flex text-2xl sm:text-4xl md:text-8xl font-extrabold'>
           V
@@ -35,6 +35,6 @@ export default function WhyUsPage({}: Props) {
       />
       <ComparsionTitle />
       <CompareFilter index={index} setIndex={setIndex} />
-    </>
+    </main>
   );
 }

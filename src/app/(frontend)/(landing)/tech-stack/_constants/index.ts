@@ -58,7 +58,7 @@ export const techStack = [
 export const techStackConfig = Object.freeze({
   name: "Crafting Excellence Through Advanced Tech Stacks | Canny Next",
   description:
-    "In the world of tech solutions, the strength of the foundation determines the height of innovation. Enter Canny Next, where our tech stack serves as the cornerstone of brilliance. Seamlessly integrating an array of cutting-edge tools and frameworks, our tech stack propels us to create immersive digital experiences. It empowers us to build websites that are not just aesthetically captivating but also functionally robust, and SaaS solutions that redefine efficiency and scalability. Our tech stack isn't just an assortment of tools; it's an orchestra, playing a symphony of innovation. Witness the art of technology in action at Canny Next as we leverage our advanced tech stack to craft solutions that transcend expectations.",
+    "In the world of tech solutions, the strength of the foundation determines the height of innovation. Enter Canny Next, where our tech stack serves as the cornerstone of brilliance. Seamlessly integrating an array of cutting-edge tools and frameworks, our tech stack propels us to create immersive digital experiences.",
   keywords: [
     "advanced web development tools",
     "cutting-edge tech stack",

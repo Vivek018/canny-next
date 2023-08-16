@@ -15,6 +15,6 @@ type Props = {
 
 export default function WhyUsLayout({children}: Props) {
   return (
-    <main>{children}</main>
+    <>{children}</>
   )
 }
