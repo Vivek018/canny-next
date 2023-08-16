@@ -1,16 +1,8 @@
 "use client";
 
 import { servicesRoutes } from "@/constants";
-import { Metadata } from "next";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { servicesConfig } from "./_constants";
-
-export const metadata: Metadata = {
-  title: servicesConfig.name,
-  description: servicesConfig.description,
-  keywords: servicesConfig.keywords,
-};
 
 type Props = {};
 

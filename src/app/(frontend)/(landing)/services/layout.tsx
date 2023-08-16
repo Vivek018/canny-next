@@ -2,6 +2,14 @@ import { LandingDescription } from "@/common/LandingDescription";
 import { LandingTitle } from "@/common/LandingTitle";
 import { ReactNode } from "react";
 import { ServiceFilter } from "./[service]/_components/ServiceFilter";
+import { Metadata } from "next";
+import { servicesConfig } from "./_constants";
+
+export const metadata: Metadata = {
+  title: servicesConfig.name,
+  description: servicesConfig.description,
+  keywords: servicesConfig.keywords,
+};
 
 type Props = {
   children: ReactNode;
