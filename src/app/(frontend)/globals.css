@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Anton";
+  src: url("../../assets/fonts/Anton/Anton-Regular.ttf");
+}
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #0a0a0a;
+
+    --muted: #f0f0f0;
+    --muted-foreground: #565656;
+
+    --popover: #ffffff;
+    --popover-foreground: #0a0a0a;
+
+    --card: #ffffff;
+    --card-foreground: #0a0a0a;
+
+    --border: #f5f0e6;
+    --input: #f0f0f0;
+
+    --primary: #3788a7;
+    --primary-foreground: #000000;
+
+    --secondary: #7d6780;
+    --secondary-foreground: #dcdcdc;
+
+    --accent: #80bde6;
+    --accent-foreground: #0a0a0a;
+
+    --destructive: #0054a6;
+    --destructive-foreground: #000000;
+
+    --ring: #f5f0d0;
+
+    --article-background: #eaf3f8;
+
+    --modal-primary: #b8d9e6;
+    --modal-secondary: #eeeeee;
+
+    --card1-bg: #b2dfdb;
+    --card2-bg: #e1bee7;
+    --card3-bg: #c1e1c5;
+    --card4-bg: #f5b7b1;
+    --card5-bg: #a2d9ce;
+  }
+
+  .dark {
+    --background: #0a0a0a;
+    --foreground: #f5f0f0;
+
+    --muted: #353535;
+    --muted-foreground: #dcdcdc;
+
+    --popover: #0a0a0a;
+    --popover-foreground: #f5f0f0;
+
+    --card: #0a0a0a;
+    --card-foreground: #f5f0f0;
+
+    --border: #292929;
+    --input: #292929;
+
+    --primary: #158abf;
+    --primary-foreground: #ffffff;
+
+    --secondary: #8a623a;
+    --secondary-foreground: #ffffff;
+
+    --accent: #49788d;
+    --accent-foreground: #ffffff;
+
+    --destructive: #0a4477;
+    --destructive-foreground: #ffffff;
+
+    --ring: #292929;
+
+    --article-background: #192432;
+
+    --modal-primary: #1b2631;
+    --modal-secondary: #2f3c45;
+
+    --card1-bg: #004d40;
+    --card2-bg: #4a148c;
+    --card3-bg: #6d1b01;
+    --card4-bg: #8e44ad;
+    --card5-bg: #1e8449;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: spin 6s linear infinite;
+}

@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(frontend)/(landing)/portfolio/page.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/VolleyBall.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/Palm.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/IceCream.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/BeachBall.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/BookCase.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Cauldron.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Fence.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Witch.jsx"],
+  "exclude": ["node_modules"]
+}

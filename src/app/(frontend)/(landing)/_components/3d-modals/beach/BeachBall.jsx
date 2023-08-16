@@ -1,0 +1,35 @@
+"use client";
+
+import { animated } from "@react-spring/three";
+import { useGLTF } from "@react-three/drei";
+import { useRef } from "react";
+
+import beachBall from "@/assets/modals/beach-ball/model.gltf";
+
+export function BeachBall(props) {
+  const group = useRef();
+
+  const { nodes, materials } = useGLTF(beachBall);
+  return (
+    <animated.group ref={group} {...props} dispose={null}>
+      <mesh
+        geometry={nodes.Sphere000.geometry}
+        material={materials["White.008"]}
+      />
+      <mesh
+        geometry={nodes.Sphere000_1.geometry}
+        material={materials["Blue.004"]}
+      />
+      <mesh
+        geometry={nodes.Sphere000_2.geometry}
+        material={materials["Red.003"]}
+      />
+      <mesh
+        geometry={nodes.Sphere000_3.geometry}
+        material={materials["Yellow.012"]}
+      />
+    </animated.group>
+  );
+}
+
+useGLTF.preload(beachBall);
