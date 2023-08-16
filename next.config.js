@@ -22,8 +22,8 @@ const nextConfig = {
         {
           loader: "file-loader",
           options: {
-            outputPath: "static/assets/models/", // Adjust this output path
-            publicPath: "/_next/static/assets/models/", // Adjust this public path
+            outputPath: "static/assets/models/", 
+            publicPath: "/_next/static/assets/models/", 
             esModule: false, // Important for gltf-webpack-loader compatibility
           },
         },

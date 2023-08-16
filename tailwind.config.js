@@ -60,8 +60,6 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        radar:
-          "linear-gradient(50deg, rgba(34, 34, 34, 0) 56%, var(--primary));",
         text: "linear-gradient(180deg,var(--foreground), #adadad);",
       },
       fontFamily: {
