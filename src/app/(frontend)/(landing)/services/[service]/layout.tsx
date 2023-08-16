@@ -9,9 +9,9 @@ export async function generateMetadata({
   params: { service: ServicePageRoutes };
 }): Promise<Metadata> {
   return {
-    title: serviceConfig[service].name,
-    description: serviceConfig[service].description,
-    keywords: serviceConfig[service].keywords,
+    title: serviceConfig[service]?.name,
+    description: serviceConfig[service]?.description,
+    keywords: serviceConfig[service]?.keywords,
   };
 }
 

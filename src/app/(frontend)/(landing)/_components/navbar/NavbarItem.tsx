@@ -11,7 +11,7 @@ type Props = {
   route: (typeof landingPageRoutes)[0];
 };
 
-const commonStyles = "transition-all duration-100";
+const commonStyles = "transition-all";
 
 export function NavbarItem({ route }: Props) {
   const pathname = usePathname();
