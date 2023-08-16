@@ -2,13 +2,13 @@
 
 import { animated, useSpring } from "@react-spring/three";
 import { Float } from "@react-three/drei";
-import { IceCream } from "../_components/3d-modals/beach/IceCream";
-import { Palm } from "../_components/3d-modals/beach/Palm";
-import { VolleyBall } from "../_components/3d-modals/beach/VolleyBall";
-import { BookCase } from "../_components/3d-modals/haunted/BookCase";
-import { Cauldron } from "../_components/3d-modals/haunted/Cauldron";
-import { Fence } from "../_components/3d-modals/haunted/Fence";
-import { Witch } from "../_components/3d-modals/haunted/Witch";
+import { IceCream } from "./3d-modals/beach/IceCream";
+import { Palm } from "./3d-modals/beach/Palm";
+import { VolleyBall } from "./3d-modals/beach/VolleyBall";
+import { BookCase } from "./3d-modals/haunted/BookCase";
+import { Cauldron } from "./3d-modals/haunted/Cauldron";
+import { Fence } from "./3d-modals/haunted/Fence";
+import { Witch } from "./3d-modals/haunted/Witch";
 
 const STEP_DURATION = 2500;
 

@@ -1,9 +1,9 @@
 "use client";
 
-import { ThemeToggle } from "@/app/(frontend)/_components/ThemeToggle";
+import { ThemeToggle } from "./ThemeToggle";
 import { HeaderLink } from "@/common/HeaderLink";
 import { Logo } from "@/common/Logo";
-import { landingPageRoutes, routes } from "@/constants";
+import { routes } from "@/constants";
 import { cn } from "@/libs/cn";
 import Link from "next/link";
 import { usePathname } from "next/navigation";

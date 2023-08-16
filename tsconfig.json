@@ -23,6 +23,20 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(frontend)/(landing)/portfolio/page.tsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/VolleyBall.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/Palm.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/IceCream.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/beach/BeachBall.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/BookCase.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Cauldron.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Fence.jsx", "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Witch.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "src/app/(frontend)/(landing)/portfolio/page.tsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/beach/VolleyBall.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/beach/Palm.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/beach/IceCream.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/beach/BeachBall.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/haunted/BookCase.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Cauldron.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Fence.jsx",
+    "src/app/(frontend)/(landing)/_components/3d-modals/haunted/Witch.jsx"
+  ],
   "exclude": ["node_modules"]
 }
