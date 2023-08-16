@@ -2,6 +2,7 @@
 
 import { servicesRoutes } from "@/constants";
 import { cn } from "@/libs/cn";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -11,9 +12,14 @@ export function ServiceFilter({}: Props) {
   const pathname = usePathname();
 
   const servicePage = pathname.split("/")[pathname.split("/").length - 1];
+  
 
   return (
-    <div className='flex flex-row sm:gap-2 rounded-full shadow-inner bg-input p-1 md:p-1.5'>
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1, transition: { delay: 0.5 } }}
+      className='flex flex-row sm:gap-2 rounded-full shadow-inner bg-input p-1 md:p-1.5'
+    >
       {servicesRoutes.map(({ slug, title }) => {
         return (
           <Link
@@ -32,6 +38,6 @@ export function ServiceFilter({}: Props) {
           </Link>
         );
       })}
-    </div>
+    </motion.div>
   );
 }

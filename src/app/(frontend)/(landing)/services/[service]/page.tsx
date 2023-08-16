@@ -1,7 +1,10 @@
+"use client";
+
 import { ServicePageRoutes } from "@/types";
 import { serviceContent } from "./_constants";
 import { cn } from "@/libs/cn";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 type Props = {
   params: { service: string };
@@ -18,7 +21,9 @@ export default function ServicesServicePage({ params: { service } }: Props) {
     currentService;
 
   return (
-    <article
+    <motion.article
+      initial={{ y: 50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1, transition: { delay: 0.05 } }}
       className={cn(
         "w-full max-h-[320px] md:max-h-[400px] gap-4 md:gap-10 flex flex-col p-4 md:p-10 shadow-lg rounded-md overflow-y-scroll",
         className
@@ -35,6 +40,6 @@ export default function ServicesServicePage({ params: { service } }: Props) {
         <p className='mt-4 md:mt-8'>{description2}</p>
         <p className='mt-4 md:mt-8'>{description3}</p>
       </div>
-    </article>
+    </motion.article>
   );
 }

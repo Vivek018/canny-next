@@ -1,3 +1,4 @@
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/libs/cn";
 
 type ComparisonMainTextProps = {
@@ -23,24 +24,38 @@ export function ComparisonMainText({
         className
       )}
     >
-      <h1
+      <div
         className={cn(
           commonComparsionMainTextClassName,
           textClassName,
           "bg-modal-primary"
         )}
       >
-        {textLeft}
-      </h1>
-      <h1
+        <AnimatePresence key={textLeft}>
+          <motion.h1
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            {textLeft}
+          </motion.h1>
+        </AnimatePresence>
+      </div>
+      <div
         className={cn(
           commonComparsionMainTextClassName,
           textClassName,
           "bg-modal-secondary"
         )}
       >
-        {textRight}
-      </h1>
+        <AnimatePresence key={textRight}>
+          <motion.h1
+            initial={{ y: -30, opacity: 0.6 }}
+            animate={{ y: 0, opacity: 1 }}
+          >
+            {textRight}
+          </motion.h1>
+        </AnimatePresence>
+      </div>
     </section>
   );
 }
