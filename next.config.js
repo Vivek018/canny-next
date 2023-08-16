@@ -7,6 +7,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 // The NextJS config defined separately
 // Gets passed to next-offline
 const nextConfig = {
+  trailingSlash: true,
   images: {
     remotePatterns: [
       {
@@ -22,8 +23,8 @@ const nextConfig = {
         {
           loader: "file-loader",
           options: {
-            outputPath: "static/assets/models/", 
-            publicPath: "/_next/static/assets/models/", 
+            outputPath: "static/assets/models/",
+            publicPath: "/_next/static/assets/models/",
             esModule: false, // Important for gltf-webpack-loader compatibility
           },
         },
