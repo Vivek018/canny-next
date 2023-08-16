@@ -54,3 +54,28 @@ export const techStack = [
       "In addition to these specialized tools, we're also equipped with the flexibility to tailor-make solutions based on the unique needs of each project. Whether it's integrating specific APIs, crafting bespoke functionalities, or aligning with cutting-edge technologies, our capability to adapt ensures that we can construct a digital landscape that perfectly aligns with your project's objectives. This adaptability empowers us to deliver exceptional, tailor-made solutions that cater precisely to your requirements, offering a level of flexibility that enables us to turn your ideas into reality.",
   },
 ];
+
+export const techStackConfig = Object.freeze({
+  name: "Crafting Excellence Through Advanced Tech Stacks | Canny Next",
+  description:
+    "In the world of tech solutions, the strength of the foundation determines the height of innovation. Enter Canny Next, where our tech stack serves as the cornerstone of brilliance. Seamlessly integrating an array of cutting-edge tools and frameworks, our tech stack propels us to create immersive digital experiences. It empowers us to build websites that are not just aesthetically captivating but also functionally robust, and SaaS solutions that redefine efficiency and scalability. Our tech stack isn't just an assortment of tools; it's an orchestra, playing a symphony of innovation. Witness the art of technology in action at Canny Next as we leverage our advanced tech stack to craft solutions that transcend expectations.",
+  keywords: [
+    "advanced web development tools",
+    "cutting-edge tech stack",
+    "innovative tech frameworks",
+    "immersive website technologies",
+    "scalable SaaS infrastructure",
+    "technology excellence",
+    "web development expertise",
+    "technical innovation showcase",
+    "advanced web development technologies",
+    "cutting-edge tech stack components",
+    "innovative tech frameworks showcase",
+    "immersive website tech",
+    "scalable SaaS infrastructure insights",
+    "technology excellence demonstration",
+    "web development expertise spotlight",
+    "technical innovation demonstration",
+    "tech stack excellence",
+  ],
+});

@@ -22,3 +22,28 @@ export const socialLink = [
     Icon: Icons.Twitter,
   },
 ];
+
+export const contactConfig = Object.freeze({
+  name: "Initiating Transformation Through Connection | Reach Out to Canny Next",
+  description:
+    "Embarking on a journey of transformation begins with a simple step—connecting. At Canny Next, we invite you to take that step. Whether you're seeking to amplify your ecommerce impact, scale SaaS horizons, or navigate the labyrinth of strategic consulting, we're here to guide you. Our experts are more than consultants; they're collaborators invested in your success. Reach out to us, and let's initiate a dialogue that leads to innovation. The digital landscape is vast, and we're here to navigate it alongside you. Every success story starts with a connection, and yours starts with Canny Next. Let's shape the future of your business together.",
+  keywords: [
+    "get in touch with tech experts",
+    "consult with Canny Next",
+    "tailored tech solutions",
+    "ecommerce enhancement consultation",
+    "SaaS scalability guidance",
+    "strategic tech partnership",
+    "business evolution initiation",
+    "top web development company",
+    "connect with tech experts",
+    "consultation with Canny Next",
+    "customized tech solutions",
+    "ecommerce enhancement consultation",
+    "SaaS scalability guidance",
+    "strategic tech partnership initiation",
+    "business evolution catalyst",
+    "leading web development company",
+    "contact information",
+  ],
+});

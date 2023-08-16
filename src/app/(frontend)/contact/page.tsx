@@ -2,6 +2,14 @@ import { LandingTitle } from "@/common/LandingTitle";
 import { ContactForm } from "./_components/ContactForm";
 import { LandingDescription } from "@/common/LandingDescription";
 import { ContactFooter } from "./_components/ContactFooter";
+import { Metadata } from "next";
+import { contactConfig } from "./_constants";
+
+export const metadata: Metadata = {
+  title: contactConfig.name,
+  description: contactConfig.description,
+  keywords: contactConfig.keywords,
+};
 
 type Props = {};
 

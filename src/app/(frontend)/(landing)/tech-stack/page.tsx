@@ -1,7 +1,14 @@
 import { LandingDescription } from "@/common/LandingDescription";
 import { LandingTitle } from "@/common/LandingTitle";
 import { TechInfo } from "./_components/TechInfo";
-import { techStack } from "./_constants";
+import { techStack, techStackConfig } from "./_constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: techStackConfig.name,
+  description: techStackConfig.description,
+  keywords: techStackConfig.keywords,
+};
 
 type Props = {};
 

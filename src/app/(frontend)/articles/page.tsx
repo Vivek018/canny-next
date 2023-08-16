@@ -1,6 +1,14 @@
 import { getArticles, getFirstAndLastArticlesID } from "@/queries/articles";
 import { Articles } from "./_components/Articles";
 import { HeroSection } from "./_components/HeroSection";
+import { Metadata } from "next";
+import { articlesConfig } from "./_constants";
+
+export const metadata: Metadata = {
+  title: articlesConfig.name,
+  description: articlesConfig.description,
+  keywords: articlesConfig.keywords,
+};
 
 type Props = {
   searchParams: { search: string; page: string; tag: string };
@@ -20,7 +28,14 @@ export default async function ArticlesPage({ searchParams }: Props) {
         <h2 className='text-xl capitalize font-semibold tracking-wide w-full px-4'>
           All Articles
         </h2>
-        <Articles articles={articles!} search={search} tag={tag} page={page} firstId={firstId?._id!} lastId={lastId?._id!} />
+        <Articles
+          articles={articles!}
+          search={search}
+          tag={tag}
+          page={page}
+          firstId={firstId?._id!}
+          lastId={lastId?._id!}
+        />
       </section>
     </main>
   );
