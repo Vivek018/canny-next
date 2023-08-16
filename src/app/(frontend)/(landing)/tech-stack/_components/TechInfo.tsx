@@ -6,7 +6,6 @@ import { TechStackTypes } from "@/types";
 import { cn } from "@/libs/cn";
 import { Dialog, DialogContent, DialogTrigger } from "@/common/ui/Dialog";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 type Props = {
   tech: (typeof techStack)[0];
