@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import { serviceConfig } from "./_constants";
 import { ServicePageRoutes } from "@/types";
 
-export async function generateMetaData({
+export async function generateMetadata({
   params: { service },
 }: {
   params: { service: ServicePageRoutes };
