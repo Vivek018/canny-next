@@ -36,7 +36,7 @@ export default function HomePage({}: Props) {
             the web.'
         />
       </section>
-      <section className='h-3/5 w-full'>
+      <section className='-mt-6 w-full h-3/5'>
         <Canvas>
           <Common cameraFov={fov} cameraPosition={[0, 3, 35]} />
           <Carousel />

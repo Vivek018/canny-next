@@ -12,7 +12,7 @@ export function BookCase(props) {
 
   const { shelfPosition, booksScale } = useSpring({
     from: {
-      shelfPosition: [0, -2.2, 0],
+      shelfPosition: [0, -1.8, 0],
       booksScale: 0,
     },
     to: [
@@ -21,7 +21,7 @@ export function BookCase(props) {
         booksScale: 1,
       },
       {
-        shelfPosition: [0, -2.2, 0],
+        shelfPosition: [0, -1.8, 0],
       },
     ],
     config: {
