@@ -26,9 +26,9 @@ export function ServiceFilter({}: Props) {
                 "bg-background shadow-md rounded-full cursor-default"
             )}
           >
-            <h3 className='text-[8px] xs:text-[10px] sm:text-xs md:text-sm'>
+            <p className='text-[8px] xs:text-[10px] sm:text-xs md:text-sm'>
               {title}
-            </h3>
+            </p>
           </Link>
         );
       })}
