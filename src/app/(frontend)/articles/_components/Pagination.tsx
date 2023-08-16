@@ -24,7 +24,7 @@ export function Pagination({ page, prevDisable, nextDisable, setPage }: Props) {
       >
         <Icons.ChevronLeft />
       </Button>
-      <p>{page}</p>
+      <p>{page + 1}</p>
       <Button
         variant='accent'
         size='icon'
