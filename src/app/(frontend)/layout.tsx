@@ -1,15 +1,14 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { siteConfig } from "@/constants";
 import { ProviderWrapper } from "./_components/ProviderWrapper";
 import { cn } from "@/libs/cn";
 import { Header } from "./_components/Header";
+import { siteConfig } from "./_constants";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("http://localhost:3000"),
   title: siteConfig.name,
   description: siteConfig.description,
   keywords: siteConfig.keywords,

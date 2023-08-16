@@ -3,7 +3,7 @@ import { Icons } from "@/libs/Icons";
 export const contact = [
   { Icon: Icons.Mail, text: "vivek@cannynext.com" },
   { Icon: Icons.Mail, text: "vivek@cannynext.in" },
-  { Icon: Icons.Phone, text: "+91 9727882884" },
+  { Icon: Icons.Phone, text: "+91 6355412603" },
   { Icon: Icons.Phone, text: "+91 8160703748" },
 ];
 

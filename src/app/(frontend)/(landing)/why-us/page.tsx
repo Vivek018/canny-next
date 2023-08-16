@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import { CompareFilter } from "./_components/CompareFilter";
 
 import {
@@ -8,24 +8,14 @@ import {
   ComparsionTitle,
 } from "./_components/ComparisonText";
 import { HappyModalView, SadModalView } from "./_components/ModalView";
+import { Metadata } from "next";
+import { OtherText, UsText, whyUsConfig } from "./_constants";
 
-const UsText = [
-  "Cutting-edge Designs",
-  "Innovative Interactivity",
-  "Futureproof Tech Used",
-  "Sleek User Experiences",
-  "Unparalleled Performance",
-  "Next-gen Aesthetics",
-];
-
-const OtherText = [
-  "Outdated Designs",
-  "Basic Interactivity",
-  "Traditional Tech Used",
-  "Standard User Experiences",
-  "Mediocre Performance",
-  "Common Aesthetics",
-];
+export const metadata: Metadata = {
+  title: whyUsConfig.name,
+  description: whyUsConfig.description,
+  keywords: whyUsConfig.keywords,
+};
 
 type Props = {};
 

@@ -8,7 +8,7 @@ const commonBorder = "border-t border-muted-foreground py-6";
 
 export function ContactFooter({}: Props) {
   return (
-    <footer className='w-full rounded-lg my-6 px-4 md:px-6 lg:px-8 py-4 text-sm md:text-[16px] flex flex-col gap-6 bg-primary text-white text-center md:text-left'>
+    <footer className='w-full rounded-lg my-6 px-4 md:px-6 lg:px-8 py-4 text-sm md:text-[16px] flex flex-col gap-6 bg-input text-muted-foreground text-center md:text-left'>
       <section className='flex flex-col md:flex-row justify-between'>
         <address className={cn("py-6 md:w-1/4 sm:leading-6 md:leading-9")}>
           {address}
