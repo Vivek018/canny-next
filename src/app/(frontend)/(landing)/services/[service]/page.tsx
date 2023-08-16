@@ -30,7 +30,7 @@ export default function ServicesServicePage({ params: { service } }: Props) {
         </h2>
         <Image className='w-1/4' src={imageBg} alt='epic website' />
       </div>
-      <div className='leading-relaxed text-sm lg:text-lg opacity-60'>
+      <div className='leading-relaxed text-sm lg:text-lg opacity-70'>
         <p className=''>{description}</p>
         <p className='mt-4 md:mt-8'>{description2}</p>
         <p className='mt-4 md:mt-8'>{description3}</p>

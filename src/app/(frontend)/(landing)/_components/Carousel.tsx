@@ -50,7 +50,7 @@ export function Carousel({ ...props }: Props) {
 
   return (
     <>
-      <group rotation-y={-Math.PI / 4} position-y={-0.01}>
+      <group {...props} rotation-y={-Math.PI / 4} position-y={-0.01}>
         <animated.group rotation-y={carouselRotation}>
           <mesh position={[0, -2, 0]}>
             <meshStandardMaterial color={"white"} />

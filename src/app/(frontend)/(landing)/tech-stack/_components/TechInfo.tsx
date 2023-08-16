@@ -35,7 +35,7 @@ export function TechInfo({
         />
         <h1 className='text-2xl font-bold mx-auto'>{title}</h1>
         <span className='block h-1 w-full bg-border'></span>
-        <p className='opacity-60 text-sm sm:text-base sm:leading-5 tracking-wide'>
+        <p className='opacity-70 text-sm sm:text-base sm:leading-5 tracking-wide'>
           {description}
         </p>
       </DialogContent>
