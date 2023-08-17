@@ -1,15 +1,4 @@
-export type SiteConfig = {
-  name: string;
-  description: string;
-  url: string;
-  ogImage: string;
-  keywords: string[];
-  icons: { icon: string };
-  links: {
-    linkedIn: string;
-    twitter: string;
-  };
-};
+
 
 export type LandingPageRoutes =
   | "Why Us"

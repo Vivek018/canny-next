@@ -1,6 +1,4 @@
-import { SiteConfig } from "@/types";
-
-export const siteConfig: SiteConfig = Object.freeze({
+export const siteConfig = Object.freeze({
   name: "Canny Next | Empowering Businesses Through Innovative Tech Solutions",
   description:
     "Welcome to Canny Next, the nexus of digital transformation where visionary technology converges with creative design. Our mission is to revolutionize businesses by offering a comprehensive suite of cutting-edge solutions. With expertise spanning ecommerce, Software as a Service (SaaS), and strategic consulting, we craft digital experiences that not only meet but exceed expectations.",
@@ -34,4 +32,5 @@ export const siteConfig: SiteConfig = Object.freeze({
     linkedIn: "https://in.linkedin.com/company/canny-next",
     twitter: "https://in.twitter.com/canny-next",
   },
+  manifest: "/manifest/manifest.webmanifest",
 });

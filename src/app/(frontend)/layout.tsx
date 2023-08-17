@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     images: [siteConfig.ogImage],
   },
+  manifest: siteConfig.manifest,
 };
 
 export default function RootLayout({

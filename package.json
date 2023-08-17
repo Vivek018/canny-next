@@ -21,6 +21,7 @@
     "clsx": "^1.2.1",
     "framer-motion": "^10.12.21",
     "next": "13.4.9",
+    "next-pwa": "^5.6.0",
     "next-sanity": "^5.1.1",
     "next-themes": "^0.2.1",
     "react": "18.2.0",
@@ -35,7 +36,8 @@
     "tailwindcss-animate": "^1.0.6",
     "three": "^0.154.0",
     "typescript": "5.1.6",
-    "valtio": "^1.11.2"
+    "valtio": "^1.11.2",
+    "webpack": "^5.88.2"
   },
   "devDependencies": {
     "@next/bundle-analyzer": "^13.4.10",
