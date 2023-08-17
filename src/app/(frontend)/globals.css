@@ -113,13 +113,3 @@ body {
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-slow-spin {
-  animation: spin 6s linear infinite;
-}
