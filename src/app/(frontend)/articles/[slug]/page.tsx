@@ -1,7 +1,12 @@
-import { getArticle } from "@/queries/article";
+import {
+  getArticle,
+  getLatestArticles,
+  getSidebarTagArticles,
+} from "@/queries/article";
 import { Article as ArticleType } from "@/types";
 import { Article } from "./_components/Article";
 import { Metadata } from "next";
+import { SidebarArticles } from "./_components/SidebarArticles";
 
 type Props = {
   params: {
@@ -24,15 +29,18 @@ export async function generateMetadata({
 
 export default async function layout({ params: { slug } }: Props) {
   const article = await getArticle(slug);
+  const tag = article.tags[0];
+  const sidebarArticles = await getSidebarTagArticles(tag);
+  const latestArticles = await getLatestArticles();
+
   return (
-    <main className='flex w-full gap-2 h-full pt-20 relative'>
-      <section className='w-[75%] py-20'>
+    <main className='flex flex-col lg:flex-row w-full gap-2 h-full pt-20 relative'>
+      <section className='lg:w-[75%] py-10'>
         <Article article={article} />
       </section>
-      <section className='fixed overflow-scroll right-0 w-[25%] h-full px-6 py-20'>
-        <div className="">
-
-        </div>
+      <section className='flex-1 lg:fixed overflow-scroll right-0 lg:w-[25%] h-full px-6 md:ml-28 lg:ml-0 py-10 flex flex-col gap-10'>
+        <SidebarArticles articles={sidebarArticles} tag={tag} />
+        <SidebarArticles articles={latestArticles} />
       </section>
     </main>
   );

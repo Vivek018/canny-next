@@ -1,5 +1,3 @@
-
-
 export type LandingPageRoutes =
   | "Why Us"
   | "Portfolio"
@@ -32,8 +30,8 @@ export type Author = {
 export type Tag = Omit<Author, "aun"> & { tun: string };
 
 export type Article = {
-  _id?: string;
-  slug?: string;
+  _id: string;
+  slug: string;
   date: string;
   header: string;
   body?: any;
@@ -41,6 +39,8 @@ export type Article = {
   author: string;
   tags: string[];
 };
+
+export type SidebarArticle = Pick<Article, "_id" | "title" | "slug">;
 
 type EmailForm = {
   name?: string;

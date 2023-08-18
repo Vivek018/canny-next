@@ -30,6 +30,9 @@ export const article = defineType({
       name: "date",
       type: "date",
       validation: (Rule) => Rule.required(),
+      options: {
+        dateFormat: "DD MMMM YYYY",
+      },
     }),
     defineField({
       name: "author",

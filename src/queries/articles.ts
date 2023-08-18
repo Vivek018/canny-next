@@ -29,6 +29,7 @@ export async function getHeroSectionCategoryArticles(): Promise<Article[]> {
     }`
   );
 }
+
 export async function getFirstAndLastArticlesID(
   search: string,
   tag: string
