@@ -6,10 +6,11 @@ export async function getArticle(slug: Article["slug"]): Promise<Article> {
   return cachedClient(
     groq`*[_type == "article" && slug.current == $slug] [0]{ 
       date, 
-      "header": header.asset -> url, 
+      title,
+      "header": header.asset->url, 
       body, 
-      author, 
-      tags
+      "author": author->name,       
+      "tags": tags[]->name
     }`,
     { slug }
   );

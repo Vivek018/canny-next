@@ -12,8 +12,7 @@ type Props = {};
 
 export function Header({}: Props) {
   const pathname = usePathname();
-  const homePage =
-    !pathname.includes(routes.articles) && pathname !== routes.contact;
+  const homePage = pathname !== routes.articles && pathname !== routes.contact;
   const bgColor = homePage && pathname !== routes.whyUS;
 
   return (
@@ -34,7 +33,9 @@ export function Header({}: Props) {
       <nav className='flex gap-5 xs:gap-7 sm:gap-9 md:gap-12 mx-auto'>
         <HeaderLink
           link='/'
-          className={homePage ? "hidden" : ""}
+          className={
+            homePage && !pathname.includes(routes.articles) ? "hidden" : ""
+          }
           title='Home'
         />
         <HeaderLink

@@ -36,7 +36,7 @@ export type Article = {
   slug?: string;
   date: string;
   header: string;
-  body?: string;
+  body?: any;
   title: string;
   author: string;
   tags: string[];

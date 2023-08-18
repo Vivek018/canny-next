@@ -51,7 +51,7 @@ export function ArticleCard({
           {article?.tags?.map((tag, index) => (
             <span
               key={index}
-              className='inline-block text-[10px] py-1 px-2 rounded-full bg-accent text-white mr-2 mt-1'
+              className='inline-block text-[10px] py-1 px-2 rounded-full bg-accent mr-2 mt-1'
             >
               {tag}
             </span>
