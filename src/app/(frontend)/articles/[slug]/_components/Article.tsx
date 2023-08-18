@@ -69,7 +69,7 @@ export function Article({ article }: Props) {
           >
             <h3
               id={_key}
-              className='mt-4 xs:mt-8 md:mt-12 text-lg sm:text-xl md:text-3xl tracking-wider font-bold'
+              className='mt-4 sm:mt-8 md:mt-12 text-lg sm:text-xl md:text-3xl tracking-wider font-bold'
             >
               {children}
             </h3>
@@ -77,21 +77,21 @@ export function Article({ article }: Props) {
         );
       },
       normal: ({ children }: any) => (
-        <p className='mt-4 xs:mt-8 md:mt-12 text-sm sm:text-base opacity-90 md:text-lg tracking-wide text-muted-foreground'>
+        <p className='mt-4 sm:mt-8 md:mt-12 text-sm xs:text-base opacity-90 md:text-lg tracking-wide text-muted-foreground'>
           {children}
         </p>
       ),
     },
     list: {
       number: ({ children }: any) => (
-        <ol className='mt-4 xs:mt-8 md:mt-12 text-sm sm:text-base text-muted-foreground tracking-wide list-decimal'>
+        <ol className='mt-4 sm:mt-8 md:mt-12 text-sm xs:text-base text-muted-foreground tracking-wide list-decimal'>
           {children}
         </ol>
       ),
     },
     listItem: {
       number: ({ children }: any) => (
-        <li className='mt-4 xs:mt-8 md:mt-16 opacity-90'>{children}</li>
+        <li className='mt-4 sm:mt-8 md:mt-16 opacity-90'>{children}</li>
       ),
     },
     types: {
