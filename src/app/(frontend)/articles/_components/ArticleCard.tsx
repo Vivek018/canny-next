@@ -20,7 +20,7 @@ export function ArticleCard({
 }: Props) {
   return article ? (
     <Link
-      href='articles'
+      href={`articles/${article?.slug}` ?? "articles"}
       className={cn(
         "w-11/12 max-w-sm rounded-lg overflow-hidden flex flex-col shadow-sm hover:brightness-95 dark:hover:brightness-105 transition bg-muted text-muted-foreground",
         className

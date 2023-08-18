@@ -12,7 +12,8 @@ type Props = {};
 
 export function Header({}: Props) {
   const pathname = usePathname();
-  const homePage = pathname !== routes.articles && pathname !== routes.contact;
+  const homePage =
+    !pathname.includes(routes.articles) && pathname !== routes.contact;
   const bgColor = homePage && pathname !== routes.whyUS;
 
   return (
@@ -38,7 +39,7 @@ export function Header({}: Props) {
         />
         <HeaderLink
           link={routes.articles}
-          className={pathname === routes.articles ? "hidden" : ""}
+          className={pathname.includes(routes.articles) ? "hidden" : ""}
           title='Articles'
         />
         <HeaderLink

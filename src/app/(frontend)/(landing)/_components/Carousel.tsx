@@ -1,7 +1,7 @@
 "use client";
 
 import { animated, useSpring } from "@react-spring/three";
-import { Float } from "@react-three/drei";
+import { Float, OrbitControls } from "@react-three/drei";
 import { IceCream } from "./3d-modals/beach/IceCream";
 import { Palm } from "./3d-modals/beach/Palm";
 import { VolleyBall } from "./3d-modals/beach/VolleyBall";
@@ -50,6 +50,7 @@ export function Carousel({ ...props }: Props) {
 
   return (
     <>
+      <OrbitControls enableZoom={false} />
       <group {...props} rotation-y={-Math.PI / 4} position-y={-0.01}>
         <animated.group rotation-y={carouselRotation}>
           <mesh position={[0, -2, 0]}>

@@ -63,16 +63,3 @@ export async function getArticles(
     { tag, search, prev: page * pageLimit, next: page * pageLimit + pageLimit }
   );
 }
-
-export async function getArticle(): Promise<Article> {
-  return cachedClient(
-    groq`*[_type == "article" && slug.current == $slug] [0]{ 
-      title, 
-      date, 
-      "header": header.asset -> url, 
-      body, 
-      author, 
-      tags
-    }`
-  );
-}
