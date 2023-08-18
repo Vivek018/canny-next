@@ -7,6 +7,9 @@
   "name": "Canny Next Infotech",
   "short_name": "Canny Next",
   "description": "Canny Next | Empowering Businesses Through Innovative Tech Solutions",
+  "workboxOptions": {
+    "maximumFileSizeToCacheInBytes": 3000000
+  },
   "icons": [
     {
       "src": "/manifest/icon-192x192.png",
