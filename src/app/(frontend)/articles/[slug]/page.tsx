@@ -7,6 +7,7 @@ import { Article as ArticleType } from "@/types";
 import { Article } from "./_components/Article";
 import { Metadata } from "next";
 import { SidebarArticles } from "./_components/SidebarArticles";
+import { siteConfig } from "../../_constants";
 
 type Props = {
   params: {
@@ -21,8 +22,13 @@ export async function generateMetadata({
   return {
     title: article?.title,
     openGraph: {
+      siteName: siteConfig.name,
       title: article?.title,
       images: [article?.header],
+      type: "website",
+      locale: "en_US",
+      url: siteConfig.url + `/articles/${slug}`,
+      description: siteConfig.description,
     },
   };
 }
