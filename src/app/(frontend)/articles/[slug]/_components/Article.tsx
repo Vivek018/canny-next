@@ -84,7 +84,7 @@ export function Article({ article }: Props) {
     },
     list: {
       number: ({ children }: any) => (
-        <ol className='mt-4 sm:mt-8 md:mt-12 text-sm xs:text-base text-muted-foreground tracking-wide list-decimal'>
+        <ol className='mt-4 sm:mt-8 md:mt-12 text-sm xs:text-base md:text-lg text-muted-foreground tracking-wide list-decimal'>
           {children}
         </ol>
       ),
@@ -128,17 +128,17 @@ export function Article({ article }: Props) {
         <div className='text-sm sm:text-base flex flex-row h-min justify-between xs:justify-start items-center opacity-75'>
           <Button
             variant='ghost'
-            size="icon"
+            size='icon'
             className='md:hidden capitalize w-9 h-9 xs:w-12 xs:h-12 bg-input'
             onClick={() => replace(routes.articles)}
           >
             <Icons.ChevronLeft />
           </Button>
-          <time className="xs:ml-auto md:ml-0">{article?.date}</time>
+          <time className='xs:ml-auto md:ml-0'>{article?.date}</time>
           <span className='hidden w-1.5 h-1.5 xs:block brightness-125 rounded-full bg-[#E57373] mx-4'></span>
           <p>{article?.author}</p>
         </div>
-        <h1 className='mt-12 mb-10 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-extrabold'>
+        <h1 className='mt-12 mb-10 text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-5xl font-extrabold'>
           {article?.title}
         </h1>
         {article?.tags?.map((tag, index) => (
