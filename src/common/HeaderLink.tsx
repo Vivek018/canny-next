@@ -23,7 +23,7 @@ export function HeaderLink({ link, title, className }: Props) {
       <h3
         className={cn(
           commonStyles,
-          "uppercase text-xs xs:text-sm md:text-lg tracking-wide xs:tracking-widest hover:text-primary hover:scale-y-110"
+          "uppercase text-xs xs:text-sm md:text-lg tracking-wide xs:tracking-widest hover:text-primary hover:scale-x-125"
         )}
       >
         {title}
