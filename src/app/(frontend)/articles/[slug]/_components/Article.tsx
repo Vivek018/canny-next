@@ -60,7 +60,7 @@ export function Article({ article }: Props) {
           <span className='w-1.5 h-1.5 brightness-125 rounded-full bg-[#E57373] mx-4'></span>
           <p>{article?.author}</p>
         </div>
-        <h1 className='mt-12 mb-10 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold'>
+        <h1 className='mt-12 mb-4 text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold'>
           {article?.title}
         </h1>
         {article?.tags?.map((tag, index) => (
