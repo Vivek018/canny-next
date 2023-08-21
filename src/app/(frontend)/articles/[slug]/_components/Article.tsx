@@ -71,7 +71,7 @@ export function Article({ article }: Props) {
             {tag}
           </span>
         ))}
-        <div className='w-full mt-8 md:mt-12 rounded-lg shadow-2xl overflow-hidden'>
+        <div className='w-full mt-8w md:mt-12 rounded-lg shadow-2xl overflow-hidden'>
           <Image
             src={article?.header}
             className='max-w-full'
