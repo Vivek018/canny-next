@@ -5,12 +5,12 @@ import VisibilitySensor from "react-visibility-sensor";
 
 const SampleImageComponent = ({ value }: any) => {
   return (
-    <div className='w-11/12 mx-auto my-20 rounded-lg shadow-lg overflow-hidden'>
+    <div className='mx-4 sm:mx-10 my-20 rounded-lg shadow-lg overflow-hidden'>
       <Image
-        width='600'
+        width='400'
         height='400'
         priority
-        className='object-contain'
+        className='object-contain mx-auto'
         src={urlBuilder({
           projectId: process.env.NEXT_PUBLIC_SANITY_PID!,
           dataset: "production",
@@ -52,7 +52,7 @@ export const TextComponents = (
     },
     list: {
       number: ({ children }: any) => (
-        <ol className='mt-4 sm:mt-8 md:mt-12 text-sm xs:text-base md:text-lg text-muted-foreground tracking-wide list-decimal'>
+        <ol className='mt-4 px-6 md:px-8 sm:mt-8 md:mt-12 text-sm xs:text-base md:text-lg text-muted-foreground tracking-wide list-decimal'>
           {children}
         </ol>
       ),

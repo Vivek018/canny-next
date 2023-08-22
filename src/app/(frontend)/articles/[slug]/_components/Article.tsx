@@ -54,7 +54,7 @@ export function Article({ article }: Props) {
           );
         })}
       </aside>
-      <article className='mx-auto md:ml-[15%] lg:ml-[18%] w-[90%] lg:w-[85%] pb-4 md:pb-10 px-3 sm:px-6'>
+      <article className='mx-auto md:ml-[15%] lg:ml-[18%] w-[90%] lg:w-[85%] pb-4 md:pb-10 sm:px-3'>
         <div className='text-sm sm:text-base flex flex-row h-min justify-start items-center opacity-75'>
           <time>{article?.date}</time>
           <span className='w-1.5 h-1.5 brightness-125 rounded-full bg-[#E57373] mx-4'></span>
