@@ -24,7 +24,7 @@ export async function generateMetadata({
     openGraph: {
       siteName: siteConfig.name,
       title: article?.title,
-      images: [article?.header],
+      images: [{ url: article?.header }],
       type: "website",
       locale: "en_US",
       url: siteConfig.url + `/articles/${slug}`,

@@ -7,8 +7,9 @@ import { ArticleCard } from "./ArticleCard";
 type Props = {};
 
 export async function HeroSection({}: Props) {
+  const category = "Blender";
   const mainArticle = await getHeroSectionMainArticle();
-  const categoryArticles = await getHeroSectionCategoryArticles();
+  const categoryArticles = await getHeroSectionCategoryArticles(category);
 
   return mainArticle ? (
     <section>

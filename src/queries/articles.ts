@@ -17,16 +17,19 @@ export async function getHeroSectionMainArticle(): Promise<Article> {
   );
 }
 
-export async function getHeroSectionCategoryArticles(): Promise<Article[]> {
+export async function getHeroSectionCategoryArticles(
+  category: string
+): Promise<Article[]> {
   return cachedClient(
-    groq`*[_type == "article" && 'Blender' in tags[]->name] | order(date) [0...5] {
+    groq`*[_type == "article" && $tag in tags[]->name] | order(date) [0...5] {
       _id, 
       title,
       "slug": slug.current, 
       date, 
       "header": header.asset->url, 
       "author": author->name
-    }`
+    }`,
+    { tag: category }
   );
 }
 
