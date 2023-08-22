@@ -36,7 +36,7 @@ export function Article({ article }: Props) {
           size='icon'
           className='capitalize ml-10 mb-2'
           // onClick={() => replace(routes.articles)}
-          onClick={() => navigator?.share({url: `/artices/${article.slug}`})}
+          onClick={() => navigator?.share({url: `https://www.cannynext.com/artices/${article.slug}`})}
         >
           <Icons.ChevronLeft />
         </Button>
@@ -72,7 +72,7 @@ export function Article({ article }: Props) {
             {tag}
           </span>
         ))}
-        <div className='w-full mt-8w md:mt-12 rounded-lg shadow-2xl overflow-hidden'>
+        <div className='w-full mt-6 md:mt-12 rounded-lg shadow-2xl overflow-hidden'>
           <Image
             src={article?.header}
             className='max-w-full'
