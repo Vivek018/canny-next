@@ -33,7 +33,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function layout({ params: { slug } }: Props) {
+export default async function ArticlePage({ params: { slug } }: Props) {
   const article = await getArticle(slug);
   const tag = article.tags[0];
   const sidebarArticles = await getSidebarTagArticles(tag);
