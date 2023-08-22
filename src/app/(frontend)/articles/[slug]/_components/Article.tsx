@@ -35,7 +35,8 @@ export function Article({ article }: Props) {
           variant='default'
           size='icon'
           className='capitalize ml-10 mb-2'
-          onClick={() => replace(routes.articles)}
+          // onClick={() => replace(routes.articles)}
+          onClick={() => navigator?.share({url: `/artices/${article.slug}`})}
         >
           <Icons.ChevronLeft />
         </Button>
