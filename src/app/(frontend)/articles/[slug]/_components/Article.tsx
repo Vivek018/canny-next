@@ -27,7 +27,6 @@ export function Article({ article }: Props) {
   };
 
   const textComponents = TextComponents(setActiveNumber);
-  console.log(navigator);
 
   return (
     <div className='flex relative'>
@@ -36,12 +35,7 @@ export function Article({ article }: Props) {
           variant='default'
           size='icon'
           className='capitalize ml-10 mb-2'
-          // onClick={() => replace(routes.articles)}
-          onClick={async () =>
-            await navigator?.share({
-              url: `https://www.cannynext.com/artices/${article.slug}`,
-            })
-          }
+          onClick={() => replace(routes.articles)}
         >
           <Icons.ChevronLeft />
         </Button>
