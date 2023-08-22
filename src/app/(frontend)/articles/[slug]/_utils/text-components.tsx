@@ -52,7 +52,7 @@ export const TextComponents = (
     },
     list: {
       number: ({ children }: any) => (
-        <ol className='mt-4 px-6 md:px-8 sm:mt-8 md:mt-12 text-xs xs:text-sm md:text-base text-muted-foreground list-decimal'>
+        <ol className='mt-4 px-3 sm:mt-8 md:mt-12 text-xs xs:text-sm md:text-base text-muted-foreground tracking-wide list-decimal'>
           {children}
         </ol>
       ),
