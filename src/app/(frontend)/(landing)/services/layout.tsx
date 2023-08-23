@@ -22,7 +22,7 @@ export default function ServicesLayout({ children }: Props) {
         <LandingTitle title='Our Services' />
         <LandingDescription text='Unlock a world of tailored solutions for your success through our comprehensive suite of services.' />
       </section>
-      <section className='w-full grid place-items-center my-4 xs:my-6 md:my-10 px-2 md:px-10'>
+      <section className='w-full grid place-items-center my-2 xs:my-4 md:my-10 px-2 md:px-10'>
         <ServiceFilter />
       </section>
       <section className='w-full h-full md:w-3/4 px-3 xs:px-6 mb-20 xs:mb-24 sm:mb-28 md:mb-10 md:mx-auto flex flex-col'>
