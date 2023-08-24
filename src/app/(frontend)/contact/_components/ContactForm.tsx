@@ -2,11 +2,13 @@
 
 import { Button } from "@/common/ui/Button";
 import { Input } from "@/common/ui/Input";
+import { Spinner } from "@/common/ui/Spinner";
 import { TextArea } from "@/common/ui/TextArea";
 import { cn } from "@/libs/cn";
 import { EmailForm } from "@/types";
 import { useRouter } from "next/navigation";
 import { ChangeEvent, FormEvent, useState } from "react";
+import toast from "react-hot-toast";
 
 type Props = {};
 
@@ -26,7 +28,7 @@ export function ContactForm({}: Props) {
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setIsSending(true);
     e.preventDefault();
-    await fetch("api/send", {
+    const { status } = await fetch("api/send", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -35,6 +37,17 @@ export function ContactForm({}: Props) {
     });
     setFormState({ email: "", message: "", subject: "", name: "" });
     setIsSending(false);
+    if (status === 200) {
+      toast.success("Mail Sent!", {
+        duration: 3000,
+        icon: "🎉",
+      });
+    } else {
+      toast.error("Failed to send mail, try again in some time", {
+        duration: 3000,
+        icon: "🥲",
+      });
+    }
     replace("/");
   };
 
@@ -101,7 +114,7 @@ export function ContactForm({}: Props) {
           isSending
         }
       >
-        {isSending ? "Sending..." : "Send"}
+        {isSending ? <Spinner className='fill-foreground' /> : "Send"}
       </Button>
     </form>
   );

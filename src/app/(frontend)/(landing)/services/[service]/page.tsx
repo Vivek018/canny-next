@@ -23,7 +23,7 @@ export default function ServicesServicePage({ params: { service } }: Props) {
   return (
     <motion.article
       initial={{ y: 50, opacity: 0 }}
-      animate={{ y: 0, opacity: 1, transition: { delay: 0.05 } }}
+      animate={{ y: 0, opacity: 1 }}
       className={cn(
         "w-full max-h-[320px] md:max-h-[400px] gap-4 md:gap-10 flex flex-col p-4 md:p-10 shadow-lg rounded-md overflow-y-scroll",
         className

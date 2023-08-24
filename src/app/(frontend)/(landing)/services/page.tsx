@@ -16,7 +16,7 @@ export default function ServicePage({}: Props) {
 
   return (
     <section className='h-[160px] grid place-items-center text-2xl md:text-4xl font-bold'>
-      Redirecting...
+      Loading...
     </section>
   );
 }
