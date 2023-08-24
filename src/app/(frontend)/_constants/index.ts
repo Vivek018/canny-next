@@ -25,8 +25,8 @@ export const siteConfig = Object.freeze({
   ],
   icons: {
     icon: "/canny_next.svg",
-    shortcut: "/canny_next.svg",
-    apple: "/canny_next.svg",
+    shortcut: "/canny_next.png",
+    apple: "/canny_next.png",
   },
   links: {
     linkedIn: "https://in.linkedin.com/company/canny-next",

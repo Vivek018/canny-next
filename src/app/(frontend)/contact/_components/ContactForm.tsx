@@ -28,6 +28,7 @@ export function ContactForm({}: Props) {
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setIsSending(true);
     e.preventDefault();
+
     const { status } = await fetch("api/send", {
       method: "POST",
       headers: {
@@ -35,6 +36,7 @@ export function ContactForm({}: Props) {
       },
       body: JSON.stringify(formState),
     });
+    
     setFormState({ email: "", message: "", subject: "", name: "" });
     setIsSending(false);
     if (status === 200) {
