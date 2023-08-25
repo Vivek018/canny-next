@@ -2,15 +2,11 @@
 
 import { cn } from "@/libs/cn";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 type Props = { link: string; title: string; className?: string };
 
 const commonStyles = "transition-all duration-100";
 
 export function HeaderLink({ link, title, className }: Props) {
-  const pathname = usePathname();
-
   return (
     <Link
       href={link}
