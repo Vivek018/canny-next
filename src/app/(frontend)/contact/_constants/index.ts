@@ -13,12 +13,12 @@ export const address =
 export const socialLink = [
   {
     name: "LinkedIn",
-    link: "https://in.linkedin.com/company/canny-next",
+    link: "https://www.cannynext.com",
     Icon: Icons.LinkedIn,
   },
   {
     name: "Twitter",
-    link: "https://in.twitter.com/canny-next",
+    link: "https://www.cannynext.com",
     Icon: Icons.Twitter,
   },
 ];
