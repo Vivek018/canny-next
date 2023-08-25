@@ -1,14 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { CompareFilter } from "./_components/CompareFilter";
 
 import {
   ComparisonMainText,
   ComparsionTitle,
 } from "./_components/ComparisonText";
-import { HappyModalView, SadModalView } from "./_components/ModalView";
+import { ModalLoader } from "./_components/ModalLoader";
 import { OtherText, UsText } from "./_constants";
+import dynamic from "next/dynamic";
+
+const HappyModalView = dynamic(
+  () => import("./_components/ModalView").then((mod) => mod.HappyModalView),
+  {
+    ssr: false,
+    loading: () => <ModalLoader />,
+  }
+);
+
+const SadModalView = dynamic(
+  () => import("./_components/ModalView").then((mod) => mod.SadModalView),
+  {
+    ssr: false,
+    loading: () => <ModalLoader />,
+  }
+);
+
 
 type Props = {};
 
@@ -26,8 +44,10 @@ export default function WhyUsPage({}: Props) {
         </span>
       </div>
       <section className='fixed w-full h-full flex flex-col lg:flex-row'>
-        <HappyModalView index={index} />
-        <SadModalView index={7 - index} />
+        <Suspense fallback={<ModalLoader />}>
+          <HappyModalView index={index} />
+          <SadModalView index={7 - index} />
+        </Suspense>
       </section>
       <ComparisonMainText
         textLeft={UsText[index - 1]}

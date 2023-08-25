@@ -1,10 +1,16 @@
 import { cn } from "@/libs/cn";
 
-export const Spinner = ({ className }: { className?: string }) => {
+export const Spinner = ({
+  className,
+  svgClassName,
+}: {
+  className?: string;
+  svgClassName?: string;
+}) => {
   return (
     <div className='z-50'>
       <svg
-        className='w-5 text-gray animate-spin z-50'
+        className={cn("w-5 text-gray animate-spin z-50", svgClassName)}
         aria-hidden='true'
         viewBox='0 0 100 101'
         fill='none'

@@ -2,9 +2,9 @@
 export const primaryColor = "#3788a7";
 
 export const landingPageRoutes = [
-  { title: "Why Us", slug: "why-us" },
   { title: "Services", slug: "services" },
   { title: "Tech Stack", slug: "tech-stack" },
+  { title: "Why Us", slug: "why-us" },
   { title: "Portfolio", slug: "portfolio" },
 ];
 

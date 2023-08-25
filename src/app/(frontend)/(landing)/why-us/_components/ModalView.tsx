@@ -1,13 +1,26 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 import { cn } from "@/libs/cn";
 import { Common } from "@/common/three/CommonComponents";
 import { Canvas } from "@react-three/fiber";
+import { ModalLoader } from "./ModalLoader";
+import dynamic from "next/dynamic";
 
-import { HappyMale } from "./compare-modals/HappyMale";
-import { SadMale } from "./compare-modals/SadMale";
+const HappyMale = dynamic(
+  () => import("./compare-modals/HappyMale").then((mod) => mod.HappyMale),
+  {
+    ssr: false,
+  }
+);
+
+const SadMale = dynamic(
+  () => import("./compare-modals/SadMale").then((mod) => mod.SadMale),
+  {
+    ssr: false,
+  }
+);
 
 type Props = {
   className?: string;
@@ -28,10 +41,12 @@ export const HappyModalView = ({ className, index }: Props) => {
         className
       )}
     >
-      <Canvas>
-        <Common cameraPosition={[0, height, 6]} />
-        <HappyMale index={index} />
-      </Canvas>
+      <Suspense fallback={<ModalLoader />}>
+        <Canvas>
+          <Common cameraPosition={[0, height, 6]} />
+          <HappyMale index={index} />
+        </Canvas>
+      </Suspense>
     </div>
   );
 };
@@ -50,10 +65,12 @@ export const SadModalView = ({ className, index }: Props) => {
         className
       )}
     >
-      <Canvas>
-        <Common cameraPosition={[0, height, 6]} />
-        <SadMale index={index} />
-      </Canvas>
+      <Suspense fallback={<ModalLoader />}>
+        <Canvas>
+          <Common cameraPosition={[0, height, 6]} />
+          <SadMale index={index} />
+        </Canvas>
+      </Suspense>
     </div>
   );
 };
