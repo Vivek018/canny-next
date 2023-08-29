@@ -21,7 +21,7 @@ export function Article({ article }: Props) {
   const [activeNumber, setActiveNumber] = useState<number | null>(null);
   const { replace } = useRouter();
 
-  const onNumberClick = (key: number) => {
+  const onNumberClick = (key: number) => () => {
     const myElement = document.getElementById(key.toString())!;
     myElement.scrollIntoView({ behavior: "instant", block: "start" });
   };
@@ -47,7 +47,7 @@ export function Article({ article }: Props) {
                 "text-2xl tracking-wide w-min p-2 opacity-30 dark:opacity-50 ml-10 font-bold font-mono cursor-pointer",
                 activeNumber === number && "opacity-100 dark:opacity-100"
               )}
-              onClick={() => onNumberClick(number)}
+              onClick={onNumberClick(number)}
             >
               0{index + 1}
             </span>

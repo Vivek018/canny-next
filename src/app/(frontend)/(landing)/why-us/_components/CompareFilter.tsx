@@ -11,6 +11,8 @@ type Props = {
 };
 
 export function CompareFilter({ index, setIndex }: Props) {
+  const setValue = (value: number) => () => setIndex(value);
+
   return (
     <div className='fixed bottom-10 top-1/2 md:top-auto left-1/2 transform -translate-x-1/2  -translate-y-1/2 md:-translate-y-0 flex  gap-20 xs:gap-28 sm:gap-40 md:gap-4 justify-between items-center z-50'>
       <Button
@@ -33,7 +35,7 @@ export function CompareFilter({ index, setIndex }: Props) {
               "hidden md:flex w-8 h-8 rounded-md",
               index === val && "cursor-auto bg-accent"
             )}
-            onClick={() => setIndex(val)}
+            onClick={setValue(val)}
           >
             {val}
           </Button>

@@ -5,25 +5,20 @@ import { Input } from "@/common/ui/Input";
 import { Spinner } from "@/common/ui/Spinner";
 import { TextArea } from "@/common/ui/TextArea";
 import { cn } from "@/libs/cn";
-import { EmailForm } from "@/types";
 import { useRouter } from "next/navigation";
-import { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useReducer, useState } from "react";
 import toast from "react-hot-toast";
 
 type Props = {};
 
 const commonClassName = "mt-2 md:mt-4 md:py-4";
 
+const reducer = (current: any, update: any) => ({ ...current, ...update });
+
 export function ContactForm({}: Props) {
   const { replace } = useRouter();
   let [isSending, setIsSending] = useState(false);
-
-  const [formState, setFormState] = useState<EmailForm>({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
+  const [formFields, setField] = useReducer(reducer, null);
 
   const onFormSubmit = async (e: FormEvent<HTMLFormElement>) => {
     setIsSending(true);
@@ -34,10 +29,10 @@ export function ContactForm({}: Props) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(formState),
+      body: JSON.stringify(formFields),
     });
-    
-    setFormState({ email: "", message: "", subject: "", name: "" });
+
+    setField(null);
     setIsSending(false);
     if (status === 200) {
       toast.success("Mail Sent!", {
@@ -53,14 +48,14 @@ export function ContactForm({}: Props) {
     replace("/");
   };
 
-  const onFormChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  const onInputChange = (
+    event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const name = e.target.name;
-    setFormState((prevState) => ({
-      ...prevState,
-      [name]: e.target.value,
-    }));
+    const {
+      target: { name, value },
+    } = event;
+
+    setField({ [name]: value });
   };
 
   return (
@@ -74,8 +69,8 @@ export function ContactForm({}: Props) {
           name='name'
           disabled={isSending}
           className={cn(commonClassName)}
-          value={formState.name}
-          onChange={onFormChange}
+          value={formFields?.name}
+          onChange={onInputChange}
         />
         <Input
           placeholder='Email *'
@@ -84,8 +79,8 @@ export function ContactForm({}: Props) {
           disabled={isSending}
           className={cn(commonClassName)}
           required
-          value={formState.email}
-          onChange={onFormChange}
+          value={formFields?.email}
+          onChange={onInputChange}
         />
       </div>
       <Input
@@ -94,8 +89,8 @@ export function ContactForm({}: Props) {
         disabled={isSending}
         className={cn(commonClassName)}
         required
-        value={formState.subject}
-        onChange={onFormChange}
+        value={formFields?.subject}
+        onChange={onInputChange}
       />
       <TextArea
         placeholder='Message *'
@@ -103,16 +98,16 @@ export function ContactForm({}: Props) {
         disabled={isSending}
         className={cn(commonClassName)}
         required
-        value={formState.message}
-        onChange={onFormChange}
+        value={formFields?.message}
+        onChange={onInputChange}
       />
       <Button
         type='submit'
         className='mt-6 w-full sm:w-40 rounded-md ml-auto hover:brightness-110'
         disabled={
-          !formState.email ||
-          !formState.message ||
-          !formState.subject ||
+          !formFields?.email ||
+          !formFields?.message ||
+          !formFields?.subject ||
           isSending
         }
       >

@@ -32,6 +32,8 @@ export function SearchFilter({
 }: Props) {
   const [focused, setFocused] = useState(false);
 
+  const setFocusValue = (value: boolean) => () => setFocused(value);
+
   return (
     <div className='flex flex-col md:flex-row px-0 w-11/12 md:px-4 gap-4 md:w-full mx-auto my-12'>
       <Input
@@ -40,8 +42,8 @@ export function SearchFilter({
         placeholder='Search by Title or Author'
         isPending={isLoading}
         value={search}
-        onFocus={() => setFocused(true)}
-        onBlur={() => setFocused(false)}
+        onFocus={setFocusValue(true)}
+        onBlur={setFocusValue(false)}
         onChange={(e) => {
           e.preventDefault();
           setPage(0);
