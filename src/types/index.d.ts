@@ -41,3 +41,10 @@ export type Article = {
 };
 
 export type SidebarArticle = Pick<Article, "_id" | "title" | "slug">;
+
+export type EmailForm = {
+  name?: string;
+  email: string;
+  subject: string;
+  message: string;
+};
