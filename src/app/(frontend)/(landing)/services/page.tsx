@@ -1,22 +1,8 @@
-"use client";
-
 import { servicesRoutes } from "@/constants";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
+import { redirect } from "next/navigation";
 
 type Props = {};
 
 export default function ServicePage({}: Props) {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.replace(`/services/${servicesRoutes[0].slug}`);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return (
-    <section className='h-[160px] grid place-items-center text-2xl md:text-4xl font-bold'>
-      Loading...
-    </section>
-  );
+  return redirect(`/services/${servicesRoutes[0].slug}`);
 }
